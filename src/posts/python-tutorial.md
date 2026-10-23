@@ -460,5 +460,403 @@ print("Total:", total)
 ```jsx
 Total: 15
 ```
+The variable total accumulates the values 1, 2, 3, 4, and 5.
+
+`4. while Loops in Python`
+
+A while loop repeatedly executes a block of code as long as its condition remains true.
+
+`Example:`
+
+```jsx
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+`Output:`
+
+```jsx
+1
+2
+3
+4
+5
+```
+
+`Explanation:`
+
+```jsx
+count = 1 initializes the variable.
+
+count <= 5 is the loop condition.
+
+count += 1 increases the value after every iteration.
+```
+
+The loop stops when count becomes 6.
+
+`Example: Countdown Program`
+
+```jsx
+count = 5
+
+while count >= 1:
+    print(count)
+    count -= 1
+
+print("Countdown complete!")
+
+```
+
+`Output:`
+
+```jsx
+5
+4
+3
+2
+1
+Countdown complete!
+```
+
+`Important Note: Infinite Loops`
+
+An infinite loop occurs when the condition never becomes false.
+
+`For example:`
+
+```jsx
+while True:
+    print("Running...")
+```
+This program continues indefinitely unless it is interrupted or a suitable stopping condition is added.
+
+Always ensure that a while loop has a way to terminate when needed.
+
+`5. break, continue, and pass Statements`
+
+Python provides three useful statements to control how code executes inside loops or conditional blocks.
+
+`The break Statement`
+
+The break statement immediately terminates the nearest enclosing loop.
+
+`Example:`
+```jsx
+for number in range(1, 10):
+    if number == 5:
+        break
+
+    print(number)
+```
+`Output:`
+```jsx
+1
+2
+3
+4
+```
+When number becomes 5, the loop stops.
+
+`The continue Statement`
+
+The continue statement skips the rest of the current iteration and moves to the next iteration.
+
+`Example:`
+```jsx
+for number in range(1, 6):
+    if number == 3:
+        continue
+
+    print(number)
+```
+`Output:`
+```jsx
+1
+2
+4
+5
+```
+The number 3 is skipped, but the loop continues.
+
+`The pass Statement`
+
+The pass statement does nothing. It acts as a placeholder when Python requires a statement syntactically, but you do not want to implement the logic yet.
+
+`Example:`
+```jsx
+number = 10
+
+if number > 0:
+    pass
+
+print("Program completed")
+```
+`Output:`
+```jsx
+Program completed
+```
+`Difference Between break, continue, and pass`
+```jsx
+Statement          Purpose
+break     =>         Terminates the loop immediately.
+continue    =>       Skips the current iteration.
+pass       =>        Performs no action and allows execution to proceed.
+```
+`6. The range() Function`
+
+The range() function generates a sequence of integers. It is commonly used with for loops.
+
+Python supports three common forms of range().
+
+`range(stop)`
+
+Starts from 0 and stops before the specified number.
+```jsx
+for i in range(5):
+    print(i)
+```
+`Output:` 0 1 2 3 4 (each number appears on a separate line).
+
+`range(start, stop)`
+
+Starts from start and stops before stop.
+```jsx
+for i in range(2, 7):
+    print(i)
+```
+```jsx
+Output: 2 3 4 5 6
+```
+
+`range(start, stop, step)`
+
+The step specifies how much the number changes each time.
+```jsx
+for i in range(2, 11, 2):
+    print(i)
+
+Output:
+
+2
+4
+6
+8
+10
+```
+`Printing Numbers in Reverse`
+```jsx
+for i in range(10, 0, -1):
+    print(i)
+
+Output: Numbers from 10 down to 1.
+```
+`Important Points About range()`
+
+- The starting value is included.
+
+- The stopping value is excluded.
+
+- The default starting value is 0 when only stop is provided.
+
+- The default step is 1.
+
+- A negative step can be used to count backwards.
+
+- A step of 0 is not allowed.
+
+`7. Pattern Printing and Loop-Based Problems`
+
+Pattern printing is a useful way to understand nested loops. The outer loop controls the rows, while the inner loop controls the items printed in each row.
+
+`Pattern 1: Right-Angled Star Triangle`
+
+`Code:`
+```jsx
+for i in range(1, 6):
+    for j in range(i):
+        print("*", end="")
+
+    print()
+```
+`Output:`
+```jsx
+*
+**
+***
+****
+*****
+```
+The outer loop determines the number of rows. The inner loop prints the required number of stars in each row. end="" keeps the stars on the same line, and print() moves to the next line.
+
+`Pattern 2: Number Triangle`
+
+`Code:`
+```jsx
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print(j, end="")
+
+    print()
+```
+`Output:`
+```jsx
+1
+12
+123
+1234
+12345
+```
+`Pattern 3: Inverted Star Triangle`
+
+`Code:`
+```jsx
+for i in range(5, 0, -1):
+    for j in range(i):
+        print("*", end="")
+
+    print()
+```
+`Output:`
+```jsx
+*****
+****
+***
+**
+*
+```
+`Program 4: Multiplication Table`
+```jsx
+number = int(input("Enter a number: "))
+
+for i in range(1, 11):
+    print(number, "x", i, "=", number * i)
+```
+If the user enters 5, the program displays the multiplication table of 5 from 1 to 10.
+
+`Program 5: Factorial of a Number`
+
+The factorial of a positive integer is the product of all positive integers up to that number. By definition, 0! = 1.
+```jsx
+number = int(input("Enter a non-negative integer: "))
+
+if number < 0:
+    print("Factorial is not defined for negative integers")
+else:
+    factorial = 1
+
+    for i in range(1, number + 1):
+        factorial *= i
+
+    print("Factorial:", factorial)
+```
+`Example: For input 5, the output is Factorial: 120.`
+
+`Program 6: Sum of Digits`
+```jsx
+number = int(input("Enter a positive integer: "))
+total = 0
+
+while number > 0:
+    digit = number % 10
+    total += digit
+    number //= 10
+
+print("Sum of digits:", total)
+```
+Example: If the input is 1234, the output is Sum of digits: 10.
+
+The % operator extracts the last digit, while // removes the last digit.
+
+`Program 7: Check Whether a Number Is Prime`
+
+A prime number is a number greater than 1 that has exactly two positive divisors: 1 and itself.
+```jsx
+number = int(input("Enter a number: "))
+
+if number < 2:
+    print("Not a prime number")
+else:
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            print("Not a prime number")
+            break
+    else:
+        print("Prime number")
+```
+This program checks for divisors only up to the square root of the number, making it more efficient than checking every smaller number.
+
+`8. Practice Questions`
+
+- Try solving these problems on your own to strengthen your understanding.
+
+- Beginner Level
+
+- Write a program to check whether a number is even or odd.
+
+- Write a program to find the largest of two numbers.
+
+- Print numbers from 1 to 100 using a for loop.
+
+- Print all even numbers between 1 and 50.
+
+- Print the multiplication table of a number entered by the user.
+
+`Intermediate Level`
+
+- Write a program to find the sum of the first N natural numbers.
+
+- Write a program to reverse a number using a while loop.
+
+- Write a program to calculate the factorial of a number.
+
+- Write a program to check whether a number is prime.
+
+- Print a right-angled triangle using numbers and stars.
+
+`Challenge Level`
+
+- Write a program to check whether a number is a palindrome.
+
+- Print the Fibonacci sequence for N terms.
+
+- Print a pyramid pattern using stars.
+
+- Find all prime numbers between 1 and 100.
+
+- Create a simple calculator using if-elif-else statements.
+
+`9. Key Takeaways`
+
+- After completing this module, you should understand:
+
+- How to use if, elif, and else for decision-making.
+
+- How nested conditions work.
+
+- How to iterate over sequences using for loops.
+
+- How to repeat operations using while loops.
+
+- How break, continue, and pass affect program execution.
+
+- How to generate number sequences using range().
+
+- How to solve practical problems using loops and nested loops.
+
+- How to print patterns and write beginner-level programming logic.
+
+`Conclusion`
+
+```jsx
+Conditional statements and loops are fundamental concepts in Python programming. They help you build programs that make decisions, repeat tasks, process data, and solve problems efficiently.
+
+Practice each example by running it in VS Code or Jupyter Notebook. Try changing the values, predicting the output, and solving the practice questions independently.
+
+In the next module, you can explore Python Data Structures: Lists, Tuples, Sets, and Dictionaries to learn how to store and manipulate collections of data.
+```
+
 
 > Tip: put every value your effect reads into the dependency array.
