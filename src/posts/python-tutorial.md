@@ -290,5 +290,175 @@ You are eligible to vote.
 - age >= 18 checks whether the age is at least 18.
 - Since the condition is true, the message is displayed.
 
+`The if-else Statement`
+
+The else statement executes when the if condition is false.
+
+`Example:`
+```jsx
+number = 7
+
+if number % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+
+```
+
+`Output:`
+
+```jsx 
+Odd number
+```
+
+The modulus operator % returns the remainder after division. If a number is divisible by 2, it is even; otherwise, it is odd.
+
+`The if-elif-else Statement`
+
+The elif keyword means “else if.” It allows you to check multiple conditions.
+
+`Example:`
+```jsx
+marks = 85
+
+if marks >= 90:
+    print("Grade A+")
+elif marks >= 80:
+    print("Grade A")
+elif marks >= 70:
+    print("Grade B")
+elif marks >= 60:
+    print("Grade C")
+else:
+    print("Grade D")
+```
+`Output:`
+
+```jsx
+Grade A
+```
+Python checks the conditions from top to bottom and executes the first matching block.
+
+`Practical Example: Positive, Negative, or Zero`
+
+```jsx 
+number = int(input("Enter a number: "))
+
+if number > 0:
+    print("Positive number")
+elif number < 0:
+    print("Negative number")
+else:
+    print("Zero")
+```
+This program takes a number from the user and determines whether it is positive, negative, or zero.
+
+`2. Nested Conditional Statements`
+
+A nested conditional statement is an if statement placed inside another if or else statement.
+
+Nested conditions are useful when one decision depends on another decision.
+
+`Example:`
+```jsx
+age = 22
+has_id = True
+
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
+    else:
+        print("Please show your ID")
+else:
+    print("Entry not allowExample:")
+```
+`Output:`
+
+```jsx 
+Entry allowed
+```
+`Explanation:`
+
+- The outer if checks whether the age is at least 18.
+- If the condition is true, the inner if checks whether the person has an ID.
+- If both conditions are true, entry is allowed.
+`Practical Example: Login Validation`
+
+```jsx
+username = input("Enter username: ")
+password = input("Enter password: ")
+
+if username == "admin":
+    if password == "1234":
+        print("Login successful")
+    else:
+        print("Incorrect password")
+else:
+    print("Invalid username")
+```
+
+This example demonstrates how nested conditions can be used to validate login details. In real applications, passwords should be securely stored and verified rather than hard-coded.
+
+`3. for Loops in Python`
+
+A for loop is used to iterate over a sequence, such as a list, string, or range of numbers.
+`Example:`
+
+```jsx
+for number in range(1, 6):
+    print(number)
+```
+`Output:`
+```jsx
+1
+2
+3
+4
+5
+```
+The loop executes five times, assigning the values 1 through 5 to number.
+
+`Iterating Through a List`
+
+```jsx 
+fruits = ["Apple", "Banana", "Mango"]
+
+for fruit in fruits:
+    print(fruit)
+```
+
+`Output:`
+
+```jsx
+Apple
+Banana
+Mango
+```
+
+`Iterating Through a String`
+
+```jsx
+for character in "Python":
+    print(character)
+```
+
+This program prints each character of the word Python on a separate line.
+
+`Calculating the Sum of Numbers`
+
+```jsx
+total = 0
+
+for number in range(1, 6):
+    total += number
+
+print("Total:", total)
+```
+
+`Output:`
+
+```jsx
+Total: 15
+```
 
 > Tip: put every value your effect reads into the dependency array.
