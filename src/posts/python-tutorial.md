@@ -254,5 +254,41 @@ Coding conventions:
 - Keep code readable and avoid unnecessary repetition.
 - Use comments where they clarify the code.
 ```
+## Module 2: Conditional Statements and Loops in Python
+`Introduction`
+
+In Python programming, conditional statements and loops are used to control the flow of a program. Conditional statements help us make decisions based on specific conditions, while loops allow us to execute a block of code multiple times.
+
+`For example:`
+- We can use an if statement to check whether a student has passed an exam.
+- We can use a for loop to print numbers from 1 to 10.
+- We can use a while loop to repeat a program until a condition becomes false.
+
+In this module, you will learn how to use conditional statements, loops, control statements, and pattern-printing techniques with practical examples.
+
+1. `if, elif, and else Statements`
+
+Conditional statements allow a program to execute different blocks of code depending on whether a condition is true or false.
+
+`The if Statement`
+
+The if statement executes a block of code when the specified condition is true.
+
+`Example:`
+
+```jsx
+age = 20
+if age >= 18:
+    print("You are eligible to vote.")
+```
+`Output:`
+```jsx
+You are eligible to vote.
+```
+`Explanation:`
+- age = 20 stores the person's age.
+- age >= 18 checks whether the age is at least 18.
+- Since the condition is true, the message is displayed.
+
 
 > Tip: put every value your effect reads into the dependency array.
