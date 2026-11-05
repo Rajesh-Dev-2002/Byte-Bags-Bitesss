@@ -858,5 +858,26 @@ Practice each example by running it in VS Code or Jupyter Notebook. Try changing
 In the next module, you can explore Python Data Structures: Lists, Tuples, Sets, and Dictionaries to learn how to store and manipulate collections of data.
 ```
 
+##  Module 3 : Python Data Structures
+
+`Introduction`
+
+Python Data Structures are used to store, organize, and manage data efficiently. They help programmers perform different operations on data, such as adding, removing, updating, and accessing elements.
+
+Python provides four main built-in data structures:
+
+```jsx
+- List
+- Tuple
+- Set
+- Dictionary
+```
+
+In this module, we will also learn about strings, indexing, slicing, mutability, and comprehensions.
+
+`1. Strings and String Methods`
+
+A string is a sequence of characters enclosed in single quotes, double quotes, or triple quotes.
+
 
 > Tip: put every value your effect reads into the dependency array.
