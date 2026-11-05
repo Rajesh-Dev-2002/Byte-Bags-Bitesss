@@ -879,5 +879,218 @@ In this module, we will also learn about strings, indexing, slicing, mutability,
 
 A string is a sequence of characters enclosed in single quotes, double quotes, or triple quotes.
 
+`Example`
+
+```jsx
+name = "Python Programming"
+print(name)
+```
+`Output:`
+```jsx
+Python Programming
+```
+`Common String Methods`
+```jsx
+
+Method                                         Description
+
+upper()                                       Converts to uppercase
+
+lower()                                       Converts to lowercase
+
+capitalize()                                  Capitalizes the first character
+
+strip()                                        Removes extra spaces
+
+replace()                                       Replaces a character or word
+
+split()                                          Splits a string into a list
+
+find()                                            Finds a character or word
+```
+`Example`
+
+```jsx
+text = "hello python"
+
+print(text.upper())
+print(text.capitalize())
+print(text.replace("python", "world"))
+```
+`outout`
+
+```jsx
+HELLO PYTHON
+Hello python
+hello world
+```
+`2.  Lists and List Methods`
+
+A list is an ordered and mutable collection of elements. Lists allow duplicate values and can store different data types.
+
+`Example`
+
+```jsx
+fruits = ["Apple", "Banana", "Mango"]
+print(fruits)
+```
+
+`Output:`
+
+```jsx
+['Apple', 'Banana', 'Mango']
+```
+
+`Common List Methods`
+```jsx
+Method                 Description
+
+append()               Adds an element
+
+insert()               Inserts an element at a position
+
+extend()               Adds multiple elements
+
+remove()               Removes a specific element
+
+pop()                  Removes an element by index
+
+sort()                 Sorts the list
+
+reverse()              Reverses the list
+
+clear()                Removes all elements
+```
+`Example`
+```jsx
+numbers = [10, 20, 30]
+
+numbers.append(40)
+numbers.insert(1, 15)
+numbers.remove(20)
+
+print(numbers)
+```
+
+`Output:`
+
+```jsx
+[10, 15, 30, 40]
+```
+
+`3. Tuples`
+
+A tuple is an ordered and immutable collection of elements. Once created, its elements cannot be changed.
+
+`Example`
+```jsx
+colors = ("Red", "Green", "Blue")
+
+print(colors)
+print(colors[0])
+```
+
+`Output:`
+```jsx
+('Red', 'Green', 'Blue')
+Red
+```
+
+`Common Tuple Methods`
+
+```jsx
+Method                  Description
+
+count()                 Counts occurrences of an element
+
+index()                 Returns the index of an element
+```
+
+`Example`
+```jsx
+numbers = (10, 20, 10, 30)
+
+print(numbers.count(10))
+print(numbers.index(20))
+```
+`Output:`
+```jsx
+2
+1
+```
+
+`4. Sets and Set Operations`
+
+A set is an unordered collection of unique elements. It does not allow duplicate values.
+
+`Example`
+```jsx
+numbers = {10, 20, 30, 10}
+
+print(numbers)
+```
+
+`Output:`
+```jsx
+{10, 20, 30}
+```
+`Common Set Methods`
+```jsx
+Method            Description
+
+add()             Adds an element
+
+update()          Adds multiple elements
+
+remove()          Removes an element
+
+discard()         Removes an element without an error if absent
+
+union()           Combines two sets
+
+intersection()    Finds common elements
+
+difference()       Finds elements present only in the first set
+```
+
+`Example:` Set Operations
+```jsx
+A = {1, 2, 3, 4}
+B = {3, 4, 5, 6}
+
+print(A.union(B))
+print(A.intersection(B))
+print(A.difference(B))
+```
+
+`Output:`
+```jsx
+{1, 2, 3, 4, 5, 6}
+{3, 4}
+{1, 2}
+```
+
+`5. Dictionaries and Dictionary Methods`
+A dictionary stores data in key-value pairs. It is mutable and keys must be unique.
+
+`Example`
+```JSX
+student = {
+    "name": "Rahul",
+    "age": 22,
+    "course": "Python"
+}
+
+print(student)
+print(student["name"])
+```
+
+`Output:`
+```JSX
+{'name': 'Rahul', 'age': 22, 'course': 'Python'}
+Rahul
+```
+
+`Common Dictionary Methods`
 
 > Tip: put every value your effect reads into the dependency array.
