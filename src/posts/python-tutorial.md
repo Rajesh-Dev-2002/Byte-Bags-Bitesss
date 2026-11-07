@@ -1093,4 +1093,138 @@ Rahul
 
 `Common Dictionary Methods`
 
+```jsx
+Method	      Description
+keys()	      Returns all keys
+values()	  Returns all values
+items()	      Returns key-value pairs
+get()	      Gets a value using a key
+update()	  Updates dictionary elements
+pop()	      Removes an item
+clear()	      Removes all itemsExample
+```
+`Example`
+```jsx
+student = {"name": "Rahul", "age": 22}
+
+print(student.keys())
+print(student.values())
+print(student.get("name"))
+```
+`Output`
+```jsx
+dict_keys(['name', 'age'])
+dict_values(['Rahul', 22])
+Rahul
+```
+`6. Indexing and Slicing`
+
+
+Indexing and slicing are used to access elements from strings, lists, and tuples.
+
+`Indexing`
+
+Indexing means accessing an individual element using its position.
+Python indexing starts from 0.
+```jsx
+fruits = ["Apple", "Banana", "Mango"]
+
+print(fruits[0])
+print(fruits[1])
+print(fruits[-1])
+```
+`output`
+```jsx
+Apple
+Banana
+Mango
+```
+
+`Slicing`
+
+Slicing means accessing a range of elements.
+
+`Syntax:`
+```jsx
+sequence[start:stop:step]
+```
+`Example`
+
+```jsx
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[1:4])
+print(numbers[:3])
+print(numbers[::2])
+```
+`output`
+```jsx
+[20, 30, 40]
+[10, 20, 30]
+[10, 30, 50]
+```
+`7. Mutable vs Immutable Objects`
+
+
+In Python, objects are classified into two categories based on whether their values can be changed after creation.
+
+
+`Mutable Objects`
+
+Mutable objects can be modified after creation.
+
+`Example:`
+```js
+.List
+.Dictionary
+.Set
+```
+```jsx
+numbers = [10, 20, 30]
+numbers.append(40)
+
+print(numbers)
+```
+`Output`
+
+```jsx
+[10,20,30,40]
+```
+`Immutable Objects`
+
+Immutable objects cannot be modified after creation.
+
+`Examples:`
+
+```jsx
+.Integer
+.Float
+.String
+.Tuple
+.Boolean
+```
+```jsx
+name = "Python"
+name = name + " Programming"
+
+print(name)
+```
+`output`
+
+```jsx
+Python Programming
+```
+Here, a new string is created rather than modifying the original string
+
+`Difference Between Mutable and Immutable`
+
+```jsx
+Mutable	                        Immutable
+Can be modified	                Cannot be modified
+List	                         Tuple
+Dictionary	                 String
+Set	                         Integer
+```
+
+
 > Tip: put every value your effect reads into the dependency array.
