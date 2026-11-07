@@ -1225,6 +1225,66 @@ List	                         Tuple
 Dictionary	                 String
 Set	                         Integer
 ```
+`8. List, Set, and Dictionary Comprehensions`
+
+Comprehensions provide a short and simple way to create new collections in Python.
+
+`A. List Comprehension`
+
+List comprehension creates a new list using a single line of code.
+
+`Syntax:`
+```jsx
+[expression for item in iterable]
+```
+`Example:`
+
+```jsx
+numbers = [1, 2, 3, 4, 5]
+
+squares = [x*x for x in numbers]
+
+print(squares)
+```
+`Output`
+
+```jsx
+[1, 4, 9, 16, 25]
+```
+`B. Set Comprehension`
+
+Set comprehension creates a set using a single line of code.
+
+`Example:`
+
+```jsx
+numbers = [1, 2, 2, 3, 4]
+
+result = {x for x in numbers}
+
+print(result)
+```
+`output`
+```jsx
+{1, 2, 3, 4}
+```
+`C. Dictionary Comprehension`
+
+Dictionary comprehension creates a dictionary using a single line of code.
+
+`Example:`
+```jsx
+numbers = [1, 2, 3, 4]
+
+squares = {x: x*x for x in numbers}
+
+print(squares)
+```
+`output`
+```jsx
+{1: 1, 2: 4, 3: 9, 4: 16}
+```
+
 
 
 > Tip: put every value your effect reads into the dependency array.
