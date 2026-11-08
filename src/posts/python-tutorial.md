@@ -1286,5 +1286,471 @@ print(squares)
 ```
 
 
+## Module 4: Python Functions
+
+`Introduction`
+
+Functions are an important part of Python programming. A function is a block of reusable code that performs a specific task.
+
+`Functions help us:`
+
+.Reduce code repetition.
+.Make programs easier to understand.
+.Organize code into smaller parts.
+.Reuse code whenever needed.
+
+Python provides built-in functions like print(), input(), len(), and sum(). We can also create our own functions using the def keyword.
+
+`1. Defining and Calling Functions`
+
+A function is defined using the def keyword, followed by the function name and parentheses.
+
+`Syntax`
+
+```jsx
+def function_name():
+    # statements
+```
+
+`Example: Defining a Function`
+
+```jsx
+def greet():
+    print("Hello, Welcome to Python!")
+
+greet()
+```
+
+`Output:`
+
+```jsx
+Hello, Welcome to Python!
+```
+
+`Explanation`
+
+.def is used to define a function.
+.greet is the function name.
+.The indented statement is the function body.
+.greet() calls or executes the function.
+
+`Example: Function with Multiple Statements`
+
+```jsx
+def student():
+    print("Name: Rahul")
+    print("Course: Python")
+    print("Age: 22")
+
+student()
+```
+
+`Output`
+```jsx
+Name: Rahul
+Course: Python
+Age: 22
+```
+`2. Parameters and Arguments`
+
+Parameters and arguments are used to pass information to a function.
+
+.Parameters: Variables defined inside the function parentheses.
+
+.Arguments: Actual values passed when calling the function.
+
+`Example`
+```jsx
+def greet(name):
+    print("Hello", name)
+
+greet("Rahul")
+```
+`Output`
+```jsx
+Hello Rahul
+```
+`Here:`
+
+. name is a parameter.
+."Rahul" is an argument.
+
+`Example:Multiple Parameters`
+
+```jsx
+def add(a, b):
+    print("Sum:", a + b)
+
+add(10, 20)
+```
+
+`Output:`
+```jsx
+Sum: 30
+```
+
+`Types of Arguments`
+
+1.Positional Arguments
+
+2.Keyword Arguments
+
+3.Default Arguments
+
+4.Variable-Length Arguments
+
+`3.Return Statements`
+
+The return statement is used to send a result back from a function.
+
+It allows us to store and reuse the returned value.
+
+`Example`
+
+```jsx
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print("Sum:", result)
+```
+`Output`
+```jsx
+Sum: 30
+```
+
+`Explanation`
+
+.return sends the result back to the caller.
+
+.The returned value is stored in the result variable.
+
+.We can use that value in other parts of the program.
+
+`Difference Between print() and return`
+```jsx
+print()                                    return
+
+Displays output on the screen              Sends a value back
+
+Used to show information                   Used to reuse results
+
+Does not return the displayed value        Returns a value from a function
+
+```
+
+`Example: Multiplication`
+
+```jsx
+def multiply(a, b):
+    return a * b
+
+answer = multiply(5, 4)
+
+print("Multiplication:", answer)
+```
+
+`Output`
+
+```jsx
+Multiplication: 20
+```
+`4. Default and Keyword Arguments`
+
+Python supports default arguments and keyword arguments to make function calls more flexible.
+
+`A. Default Arguments`
+
+A default argument is a parameter that already has a value assigned in the function definition.
+
+If no value is passed, Python uses the default value.
+
+`Example`
+
+```jsx
+def greet(name="Guest"):
+    print("Hello", name)
+
+greet()
+greet("Rahul")
+```
+
+`output`
+
+```jsx
+Hello Guest
+Hello Rahul
+```
+`Explanation`
+
+.name="Guest" is a default argument.
+
+.If we do not pass a value, it uses Guest.
+
+.If we pass a value, it uses the provided value.
+
+`B. Keyword Arguments`
+
+Keyword arguments allow us to pass values using parameter names.
+
+`Example`
+
+```jsx
+def student(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student(age=22, name="Rahul")
+```
+`Output`
+```jsx
+Name: Rahul
+Age: 22
+```
+`Explanation`
+
+We can pass arguments in any order by using parameter names.
+
+`5. *args and **kwargs`
+
+Python provides *args and **kwargs to pass a variable number of arguments to a function.
+
+`A. *args`
+
+*args allows a function to accept multiple positional arguments.
+
+It stores the arguments in a tuple.
+
+`Example`
+
+```jsx
+def add(*args):
+    total = 0
+
+    for num in args:
+        total += num
+
+    print("Total:", total)
+
+add(10, 20, 30, 40)
+```
+
+`Output`
+
+```jsx
+Total: 100
+```
+
+`Explanation`
+
+.*args accepts multiple values.
+
+.All values are stored in a tuple.
+
+.The for loop adds all the numbers.
+
+`B. **kwargs`
+
+**kwargs allows a function to accept multiple keyword arguments.
+
+It stores the arguments in a dictionary.
+
+`Example`
+
+```jsx
+def student(**kwargs):
+    for key, value in kwargs.items():
+        print(key, ":", value)
+
+student(name="Rahul", age=22, course="Python")
+```
+
+`Output`
+
+```jsx
+name : Rahul
+age : 22
+course : Python
+```
+`Difference Between *args and **kwargs`
+
+```jsx
+*args                                      **kwargs
+
+Accepts multiple positional arguments      Accepts multiple keyword arguments
+
+Stores values in a tuple                   Stores values in a dictionary
+
+Uses one asterisk (*)                      Uses two asterisks (**)
+```
+
+`6. Lambda Functions`
+
+A lambda function is a small anonymous function that is defined using the lambda keyword.
+
+It can contain multiple arguments but only one expression.
+
+`Syntax`
+```jsx
+lambda arguments: expression
+```
+`Example`
+
+```jsx
+square = lambda x: x * x
+
+print(square(5))
+```
+
+`Output`
+```jsx
+25
+```
+`Example with Multiple Arguments`
+```jsx
+add = lambda a, b: a + b
+print(add(10, 20))
+```
+
+`Output:`
+```jsx
+30
+```
+`Example: Even or Odd`
+```jsx
+check = lambda x: "Even" if x % 2 == 0 else "Odd"
+
+print(check(10))
+print(check(7))
+```
+`Output`
+```jsx
+Even
+Odd
+```
+`Explanation`
+
+.lambda creates an anonymous function.
+
+.x is the argument.
+
+.The expression is evaluated and returned automatically.
+
+`7. Recursion and Variable Scope`
+
+`A. Recursion`
+
+Recursion is a process in which a function calls itself to solve a problem.
+
+A recursive function must have a base condition to stop the repeated function calls.
+
+`Example: Factorial Using Recursion`
+
+```jsx
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
+```
+
+`Output`
+```jsx
+120
+```
+`Explanation`
+
+The factorial of 5 is:
+
+```jsx
+5 × 4 × 3 × 2 × 1 = 120
+```
+
+.The function calls itself with a smaller number.
+
+.The base condition stops recursion when n becomes 1.
+
+.The final result is 120.
+
+`B. Variable Scope`
+
+Variable scope refers to the area of a program where a variable can be accessed.
+
+Python mainly has two common types of variable scope:
+
+`1. Local Variables`
+
+A local variable is created inside a function and can only be accessed within that function.
+
+`Example`
+
+```jsx
+def greet():
+    message = "Hello Python"
+    print(message)
+
+greet()
+```
+
+`Output`
+```jsx
+Hello Python
+```
+`2. Global Variables`
+
+A global variable is created outside a function and can be accessed throughout the program.
+
+`Example`
+```jsx
+name = "Rahul"
+
+def greet():
+    print("Hello", name)
+
+greet()
+print(name)
+```
+
+`Output:`
+```jsx
+Hello Rahul
+Rahul
+```
+
+`Using the Global Keyword`
+
+The global keyword allows us to modify a global variable inside a function.
+
+```jsx
+count = 10
+
+def update():
+    global count
+    count = 20
+
+update()
+
+print(count)
+```
+`Output`
+```jsx
+20
+```
+`Difference Between Local and Global Variables`
+```jsx
+Local Variable                      Global Variable
+
+Defined inside a function            Defined outside a function
+
+Accessible inside that function      Accessible throughout the module
+
+Exists within its local scope        Can be accessed by functions in the module
+```
+
+
+
 
 > Tip: put every value your effect reads into the dependency array.
