@@ -97,6 +97,7 @@ s1.display()
 Name: Rahul
 ```
 `B. Class Method`
+
 A class method works with class-level data and uses cls.
 
 ```jsx
