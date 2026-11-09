@@ -169,6 +169,180 @@ Dog is barking
 
 .Hybrid Inheritance
 
+`A. Single Inheritance`
+
+Single inheritance occurs when one child class inherits properties and methods from one parent class.
+
+`Example:`
+```jsx
+class Parent:
+    def display(self):
+        print("This is Parent class")
+
+class Child(Parent):
+    def show(self):
+        print("This is Child class")
+
+obj = Child()
+obj.display()
+obj.show()
+```
+`Output`
+```jsx
+This is Parent class
+This is Child class
+```
+`B. Multiple Inheritance`
+
+Multiple inheritance occurs when one child class inherits properties and methods from two or more parent classes.
+
+`Example:`
+```jsx
+class Father:
+    def father_skill(self):
+        print("Father: Driving")
+
+class Mother:
+    def mother_skill(self):
+        print("Mother: Cooking")
+
+class Child(Father, Mother):
+    def child_skill(self):
+        print("Child: Programming")
+
+obj = Child()
+
+obj.father_skill()
+obj.mother_skill()
+obj.child_skill()
+```
+`Output:`
+```jsx
+Father: Driving
+Mother: Cooking
+Child: Programming
+```
+`C. Multilevel Inheritance`
+
+Multilevel inheritance occurs when a class inherits from another child class, creating a chain of inheritance.
+
+`Example:`
+```jsx
+class Grandparent:
+    def display_grandparent(self):
+        print("Grandparent class")
+
+class Parent(Grandparent):
+    def display_parent(self):
+        print("Parent class")
+
+class Child(Parent):
+    def display_child(self):
+        print("Child class")
+
+obj = Child()
+
+obj.display_grandparent()
+obj.display_parent()
+obj.display_child()
+```
+
+`Output:`
+```jsx
+Grandparent class
+Parent class
+Child class
+```
+
+`D. Hierarchical Inheritance`
+
+Hierarchical inheritance occurs when multiple child classes inherit properties and methods from a single parent class.
+
+`Example:`
+```jsx
+class Animal:
+    def eat(self):
+        print("Animals can eat")
+
+class Dog(Animal):
+    def bark(self):
+        print("Dog barks")
+
+class Cat(Animal):
+    def meow(self):
+        print("Cat meows")
+
+dog = Dog()
+cat = Cat()
+
+dog.eat()
+dog.bark()
+
+cat.eat()
+cat.meow()
+```
+
+`Output:`
+```jsx
+Animals can eat
+Dog barks
+Animals can eat
+Cat meows
+```
+
+`E. Hybrid Inheritance`
+
+Hybrid inheritance is a combination of two or more types of inheritance.
+
+`Example:`
+```jsx
+class A:
+    def show_a(self):
+        print("Class A")
+
+class B(A):
+    def show_b(self):
+        print("Class B")
+
+class C(A):
+    def show_c(self):
+        print("Class C")
+
+class D(B, C):
+    def show_d(self):
+        print("Class D")
+
+obj = D()
+
+obj.show_a()
+obj.show_b()
+obj.show_c()
+obj.show_d()
+```
+
+`Output:`
+```jsx
+Class A
+Class B
+Class C
+Class D
+```
+`Difference Between Types of Inheritance`
+
+```jsx
+Type                                 Description
+
+Single                               One child inherits from one parent
+
+Multiple                             One child inherits from multiple parents
+
+Multilevel                           Inheritance happens in a chain
+
+Hierarchical                         Multiple children inherit from one parent
+
+Hybrid                               Combination of multiple inheritance types
+```
+
 `5. Polymorphism`
 
 Polymorphism means one name or interface can have different behaviors depending on the object.
@@ -209,8 +383,7 @@ Python uses naming conventions to indicate access levels:
 
 . Private:__name
 
-`Example`
-
+`Example:`
 ```jsx
 class BankAccount:
     def __init__(self, balance):
@@ -233,7 +406,7 @@ Abstraction means hiding implementation details and showing only essential funct
 
 Python provides the abc module to implement abstraction using abstract classes.
 
-`Example`
+`Example:`
 ```jsx
 from abc import ABC, abstractmethod
 
