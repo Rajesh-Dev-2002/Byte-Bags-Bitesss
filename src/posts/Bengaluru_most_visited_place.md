@@ -48,3 +48,5 @@ A simple plan: start at Lalbagh at sunrise, grab masala dosa and filter coffee a
 Bengaluru keeps reinventing itself, but its gardens, palaces, and markets are what visitors remember. If you only have time for one place in 2026, make it Lalbagh. It captures the city’s calm side and its busy side in a single visit.
 
 Before you go: entry fees, timings, and event dates change, so check the official sources first.
+
+![Add your photo here](https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SOf-xn2dYUSdxI0vCxINCae1MZLcNEUXlc3-6xv3_X6svtGq_Yimy4nrS7jWZ2XbiN8_Go67twz-RJ3j7yzIL3vg6bslhvmh8d8E5U4N-TdpqnzeP8GzZiedG0S8Ha64g2P4YBAQ=s680-w680-h510-rw)
