@@ -14,13 +14,14 @@ Object-Oriented Programming (OOP) is a programming approach based on classes and
 
 Python supports four main OOP principles:
 
-.Encapsulation
 
-.Inheritance
+- Encapsulation
 
-.Polymorphism
+- Inheritance
 
-.Abstraction
+- Polymorphism
+
+- Abstraction
 
 In this module, we will learn how to create classes, work with objects, use methods, and understand the important concepts of OOP.
 
@@ -160,15 +161,15 @@ Dog is barking
 ```
 `Types of Inheritance`
 
-.Single Inheritance
+- Single Inheritance
 
-.Multiple Inheritance
+- Multiple Inheritance
 
-.Multilevel Inheritance
+- Multilevel Inheritance
 
-.Hierarchical Inheritance
+- Hierarchical Inheritance
 
-.Hybrid Inheritance
+- Hybrid Inheritance
 
 `A. Single Inheritance`
 
@@ -376,13 +377,13 @@ Cat meows
 
 Encapsulation means combining data and methods inside a class and controlling access to the data.
 
-Python uses naming conventions to indicate access levels:
+Python uses naming conventions to indicate access level :
 
-. Public:name
+- Public:name
 
-. Protected:_name
+- Protected:_name
 
-. Private:__name
+- Private:__name
 
 `Example:`
 ```jsx
@@ -527,13 +528,13 @@ Dunder methods are special methods that start and end with double underscores.
 
 `Examples:`
 
-. __init__() - Initializes an object.
+- **__init__()** - Initializes an object.
 
-. __str__() - Returns a readable string representation.
+- **__str__()** - Returns a readable string representation.
 
-. __len__() - Defines the behavior of len().
+- **__len__()** - Defines the behavior of len().
 
-. __add__() - Defines addition behavior.
+- **__add__()** - Defines addition behavior.
 
 `Example`
 ```jsx
@@ -575,3 +576,362 @@ print(student.name)
 ```jsx
 Rahul
 ```
+## Module 6: Advanced Python
+
+`Introduction`
+
+Advanced Python concepts help developers write efficient, reusable, and professional applications. They provide better ways to handle errors, manage files, organize code, and automate tasks.
+
+In this module, we will explore important advanced Python features used in real-world development.
+
+`1. Exception Handling`
+
+Exception handling is used to handle runtime errors without stopping the entire program unexpectedly.
+
+Python provides the following keywords:
+
+- **try**
+
+- **except**
+
+- **else**
+
+- **finally**
+
+- **raise**
+
+`Example`
+```jsx
+try:
+    a = 10
+    b = 0
+    result = a / b
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+finally:
+    print("Program completed")
+```
+
+`Output:`
+```jsx
+Cannot divide by zero
+Program completed
+```
+
+`2. File Handling`
+
+File handling allows Python programs to create, read, write, and modify files.
+
+`Common File Modes`
+```jsx
+Mode                                 Description
+
+r                                    Read a file
+
+w                                    Write to a file
+
+a                                    Append data
+
+x                                    Create a new file
+
+rb                                   Read a binary file
+
+wb                                   Write a binary file
+```
+
+`Example: Writing to a File`
+```jsx
+with open("sample.txt", "w") as file:
+    file.write("Welcome to Python")
+```
+
+`Example: Reading a File`
+```jsx
+with open("sample.txt", "r") as file:
+    content = file.read()
+
+
+print(content)
+```
+
+`Output`
+```jsx
+Welcome to Python
+```
+`3. Modules and Packages`
+
+`A. Modules`
+
+A module is a Python file containing functions, variables, and classes that can be reused in another Python program.
+
+`Example`
+```jsx
+import math
+
+print(math.sqrt(25))
+print(math.pi)
+```
+`Output:`
+```jsx
+5.0
+3.141592653589793
+```
+
+`B. Packages`
+
+A package is a collection of related Python modules organized inside a directory.
+
+`Example structure:`
+```jsx
+my_package/
+    __init__.py
+    calculator.py
+    operations.py
+```
+
+`Importing a Module`
+```jsx
+import math
+
+print(math.factorial(5))
+```
+
+`Output:`
+```jsx
+120
+```
+
+`4. Iterators and Generators`
+
+`A. Iterators`
+
+An iterator is an object that allows us to access elements one at a time using next().
+
+Python provides iter() and next() functions.
+
+`Example`
+```jsx
+numbers = [10, 20, 30]
+
+iterator = iter(numbers)
+
+print(next(iterator))
+print(next(iterator))
+print(next(iterator))
+```
+
+`Output:`
+```jsx
+10
+20
+30
+```
+
+`B. Generators`
+
+A generator is a special type of iterator that produces values one at a time using the yield keyword.
+
+`Example`
+```jsx
+def numbers():
+    yield 10
+    yield 20
+    yield 30
+
+for num in numbers():
+    print(num)
+```
+
+`Output:`
+```jsx
+10
+20
+30
+```
+
+`5. Decorators`
+
+A decorator is a function that modifies or extends the behavior of another function without changing its original code.
+
+`Example`
+```jsx
+def decorator(func):
+    def wrapper():
+        print("Before function")
+        func()
+        print("After function")
+    return wrapper
+
+@decorator
+def greet():
+    print("Hello Python")
+
+greet()
+```
+
+`Output:`
+
+```jsx
+Before function
+Hello Python
+After function
+```
+`6. Regular Expressions`
+
+Regular Expressions **(RegEx)** are used to search, match, and manipulate text based on specific patterns.
+
+Python provides the re module for regular expressions.
+
+`Common RegEx Functions`
+```jsx
+Function                                  Description
+
+search()                                  Finds the first match
+
+match()                                   Checks for a match at the beginning
+
+findall()                                 Returns all matches
+
+sub()                                     Replaces matched text
+
+split()                                   Splits text using a pattern
+```
+`Example`
+```jsx
+import re
+
+text = "My phone number is 9876543210"
+
+result = re.findall(r"\d+", text)
+
+print(result)
+```
+
+`Output:`
+```jsx
+['9876543210']
+```
+`7. Working with JSON`
+
+JSON **(JavaScript Object Notation)** is a popular format used to exchange data between applications.
+
+Python provides the built-in json module to work with JSON data.
+
+`Common JSON Methods`
+```jsx
+Method                        Description
+
+json.dumps()                  Converts Python data into a JSON string
+
+json.loads()                  Converts a JSON string into Python data
+
+json.dump()                   Writes JSON data to a file
+
+json.load()                   Reads JSON data from a file
+```
+`Example`
+
+```jsx
+import json
+
+student = {
+    "name": "Rahul",
+    "age": 22,
+    "course": "Python"
+}
+
+json_data = json.dumps(student)
+
+print(json_data)
+```
+`Output:`
+```jsx
+{"name": "Rahul", "age": 22, "course": "Python"}
+```
+`8. Virtual Environments and pip`
+
+`A. Virtual Environments`
+
+A virtual environment creates an isolated Python environment for a project. It helps manage project-specific dependencies.
+
+`Creating a Virtual Environment`
+```jsx
+python -m venv myenv
+```
+
+`Activating the Environment`
+
+`Windows:`
+```jsx
+myenv\Scripts\activate
+```
+`macOS / Linux:`
+```jsx
+source myenv/bin/activate
+```
+`Deactivating the Environment`
+```jsx
+deactivate
+```
+`B. pip`
+
+pip is Python's package installer. It is used to install and manage external libraries.
+
+`Common pip Commands`
+```jsx
+Command                         Description
+pip install pandas	      Installs Pandas
+pip uninstall pandas	      Uninstalls Pandas
+pip list	               Displays installed packages
+pip show pandas	               Displays package details
+pip freeze	               Lists installed packages and versionsExample
+```
+`Example`
+```jsx
+pip install numpy
+```
+`9. Logging and Debugging`
+
+`A. Logging`
+
+Logging helps developers record events, warnings, and errors during program execution.
+
+Python provides the built-in logging module.
+
+`Logging Levels`
+```jsx
+Level	           Description
+DEBUG	           Detailed debugging information
+INFO	           General information
+WARNING	           Indicates a potential problem
+ERROR	           Indicates an error
+CRITICAL	   Indicates a serious problem
+```
+`Example`
+```jsx
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+logging.debug("Debug message")
+logging.info("Program started")
+logging.warning("Warning message")
+logging.error("An error occurred")
+```
+`Output:`
+```jsx
+INFO:root:Program started
+WARNING:root:Warning message
+ERROR:root:An error occurred
+```
+`B. Debugging`
+
+Debugging is the process of identifying and fixing errors in a program.
+
+`Common debugging techniques:`
+- Using print() statements.
+- Using breakpoints in VS Code.
+- Checking error messages.
+- Using Python's built-in pdb debugger.
