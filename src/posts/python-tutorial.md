@@ -76,7 +76,7 @@ summary: Complete Python Tutorial.
 7. Python interview questions and coding problems
 
 
-
+![](https://media.licdn.com/dms/image/v2/D5612AQEz9KSuvhncQA/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1704352101828?e=1795651200&v=beta&t=vB5TyYkn6s2mVifmCOmwZLHQS3hfW74B43MAQEYYJ4g)
 
 ## Module 1: Python Fundamentals
 
