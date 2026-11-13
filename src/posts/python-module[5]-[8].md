@@ -935,3 +935,411 @@ Debugging is the process of identifying and fixing errors in a program.
 - Using breakpoints in VS Code.
 - Checking error messages.
 - Using Python's built-in pdb debugger.
+
+
+## Module 7: Practical Python
+`Introduction`
+
+Practical Python focuses on applying Python programming concepts to real-world projects and applications.
+
+It helps developers work with databases, APIs, files, testing frameworks, data analysis libraries, and version control systems.
+
+In this module, we will learn how Python is used in practical development environments.
+
+`1. Working with CSV and Excel Files`
+
+Python allows us to read, write, and manipulate CSV and Excel files.
+
+`A. Working with CSV Files`
+
+CSV (Comma-Separated Values) is a file format used to store tabular data.
+
+Python provides the built-in csv module.
+
+`Example: Writing a CSV File`
+```jsx
+import csv
+
+data = [
+    ["Name", "Age"],
+    ["Rahul", 22],
+    ["Priya", 23]
+]
+
+with open("students.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+```
+`Example: Reading a CSV File`
+```jsx
+import csv
+
+with open("students.csv", "r") as file:
+    reader = csv.reader(file)
+
+    for row in reader:
+        print(row)
+```
+`Output:`
+
+```jsx
+['Name', 'Age']
+['Rahul', '22']
+['Priya', '23']
+```
+`B. Working with Excel Files`
+
+Python can work with Excel files using libraries such as Pandas and openpyxl.
+`Example`
+```jsx
+import pandas as pd
+
+data = {
+    "Name": ["Rahul", "Priya"],
+    "Age": [22, 23]
+}
+
+df = pd.DataFrame(data)
+
+df.to_excel("students.xlsx", index=False)
+```
+**Note:** Install the required libraries before running Excel examples.
+```jsx
+pip install pandas openpyxl
+```
+`2. Python with MySQL`
+
+Python can connect to MySQL databases to store, retrieve, update, and delete data.
+
+A popular library for connecting Python with MySQL is mysql-connector-python.
+
+`Installation`
+```jsx
+pip install mysql-connector-python
+```
+`Example: Connecting to MySQL`
+```jsx
+import mysql.connector
+
+connection = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="your_password",
+    database="student_db"
+)
+
+if connection.is_connected():
+    print("Database connected successfully")
+
+connection.close()
+```
+`Output:`
+```jsx
+Database connected successfully
+```
+`Example: Fetching Data`
+```jsx
+import mysql.connector
+
+connection = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="your_password",
+    database="student_db"
+)
+
+cursor = connection.cursor()
+
+cursor.execute("SELECT * FROM students")
+
+for row in cursor.fetchall():
+    print(row)
+
+cursor.close()
+connection.close()
+```
+**Note:** Replace the database name, username, password, and table name with your actual MySQL details.
+
+`3. Using APIs and HTTP Requests`
+
+An API (Application Programming Interface) allows two applications to communicate and exchange data.
+
+Python provides the requests library to send HTTP requests.
+
+`Common HTTP Methods`
+```jsx
+Method	                             Description
+GET	                             Retrieves data
+POST	                             Sends new data
+PUT	                             Updates existing data
+PATCH	                             Partially updates data
+DELETE	                             Deletes data
+```
+`Installation`
+```jsx
+pip install requests
+```
+`Example: GET Request`
+```jsx
+import requests
+
+url = "https://jsonplaceholder.typicode.com/posts/1"
+
+response = requests.get(url)
+
+print(response.status_code)
+print(response.json())
+```
+`Output:`
+```jsx
+200
+{'userId': 1, 'id': 1, 'title': '...', 'body': '...'}
+```
+
+The title and body contain the full response values returned by the API.
+
+`4. Unit Testing with unittest or pytest`
+
+Unit testing checks whether individual parts of a program work correctly.
+
+Python supports different testing frameworks, including unittest and pytest.
+
+`A. Using unittest`
+
+unittest is a built-in Python testing framework.
+
+`Example`
+```jsx
+import unittest
+
+def add(a, b):
+    return a + b
+
+class TestCalculator(unittest.TestCase):
+
+    def test_add(self):
+        self.assertEqual(add(10, 20), 30)
+
+if __name__ == "__main__":
+    unittest.main()
+```
+`Expected Result:`
+```jsx
+Ran 1 test
+OK
+```
+`B. Using pytest`
+
+pytest is a popular external testing framework.
+
+`Installation`
+```jsx
+pip install pytest
+```
+`Example`
+
+Create a file named test_calculator.py.
+```jsx
+def add(a, b):
+    return a + b
+
+def test_add():
+    assert add(10, 20) == 30
+```
+`Run the following command:`
+```jsx
+pytest
+```
+`Expected Result:`
+```jsx
+1 passed
+```
+`5. NumPy and Pandas Basics`
+
+NumPy and Pandas are popular Python libraries used for numerical computing and data analysis.
+
+`A. NumPy`
+NumPy is used to perform mathematical operations on arrays efficiently.
+
+`Installation`
+```jsx
+pip install numpy
+```
+`Example`
+```jsx
+import numpy as np
+
+numbers = np.array([10, 20, 30, 40])
+
+print(numbers)
+print(numbers.mean())
+print(numbers.max())
+```
+`Output:`
+```jsx
+[10 20 30 40]
+25.0
+40
+```
+`Common NumPy Functions`
+```jsx
+Function	                            Description
+array()	                                Creates an array
+mean()	                                Calculates the average
+sum()	                                Calculates the total
+max()	                                Returns the maximum value
+min()	                                Returns the minimum value
+reshape()	                            Changes array shape
+```
+`B. Pandas`
+
+Pandas is used for data manipulation and analysis. It provides two important data structures: Series and DataFrame.
+
+`Installation`
+```jsx
+pip install pandas
+```
+`Example`
+```jsx
+import pandas as pd
+
+data = {
+    "Name": ["Rahul", "Priya", "Amit"],
+    "Age": [22, 23, 24]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+```
+`Output:`
+```jsx
+    Name  Age
+0  Rahul   22
+1  Priya   23
+2   Amit   24
+```
+`Common Pandas Functions`
+```jsx
+Function	                  Description
+read_csv()	                  Reads a CSV file
+read_excel()	                  Reads an Excel file
+head()	                          Displays the first rows
+tail()	                          Displays the last rows
+info()	                          Shows DataFrame information
+describe()	                  Generates statistical information
+dropna()	                  Removes missing values
+fillna()	                  Fills missing values
+```
+`6. Git and GitHub for Python Projects`
+
+Git is a version control system used to track changes in code.
+
+GitHub is an online platform used to store, manage, and collaborate on Git repositories.
+
+`Common Git Commands`
+```jsx
+Command	                            Description
+git init	                        Initializes a repository
+git status	                        Checks repository status
+git add .	                        Stages changes
+git commit -m "message"         	Saves changes
+git push	                        Uploads changes to GitHub
+git pull	                        Downloads and integrates updates
+git clone	                        Copies a repository 
+```
+`Example: Pushing a Python Project`
+```jsx
+git init
+git add .
+git commit -m "Initial Python project"
+git branch -M main
+git remote add origin <repository-url>
+git push -u origin main
+```
+**Note:** If you already have an existing GitHub repository connected to your project, you do not need to repeat the initialization and remote setup commands.
+
+`7. Python Interview Questions and Coding Problems`
+
+Python interview preparation helps developers improve their programming knowledge, problem-solving skills, and coding abilities.
+
+`A. Basic Python Interview Questions`
+
+1. What is Python?
+2. What are the main features of Python?
+3. What are Python data types?
+4. What is the difference between a list and a tuple?
+5. What is the difference between == and is?
+6. What are functions in Python?
+7. What is OOP?
+8. What is inheritance?
+9. What are decorators?
+10. What is exception handling?
+
+`B. Common Python Coding Problems`
+
+`1. Reverse a String`
+```jsx
+text = "Python"
+
+print(text[::-1])
+```
+`Output:`
+```jsx
+nohtyP
+```
+`2. Check Whether a Number Is Even or Odd`
+```jsx
+num = 10
+
+if num % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+```
+`Output:`
+```jsx
+Even number
+```
+`3. Find the Factorial of a Number`
+```jsx
+num = 5
+factorial = 1
+
+for i in range(1, num + 1):
+    factorial *= i
+
+print(factorial)
+```
+`Output:`
+```jsx
+120
+```
+`4. Check Whether a Number Is Prime`
+```jsx
+num = 7
+
+if num > 1:
+    for i in range(2, num):
+        if num % i == 0:
+            print("Not Prime")
+            break
+    else:
+        print("Prime Number")
+else:
+    print("Not Prime")
+```
+`Output:`
+```jsx
+Prime Number
+```
+`5. Find the Largest Number in a List`
+```jsx
+numbers = [10, 50, 20, 80, 30]
+
+print(max(numbers))
+```
+`Output:`
+```jsx
+80
+```
