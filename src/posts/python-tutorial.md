@@ -351,6 +351,18 @@ elif number < 0:
 else:
     print("Zero")
 ```
+`Output`
+
+```jsx
+Enter a number:17
+Positive number
+
+Enter a number:-5
+Negative number
+
+Enter a number:0
+Zero
+```
 This program takes a number from the user and determines whether it is positive, negative, or zero.
 
 `2. Nested Conditional Statements`
